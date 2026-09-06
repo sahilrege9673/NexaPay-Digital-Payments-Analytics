@@ -263,7 +263,7 @@ Python notebooks provide exploratory data analysis and business validation:
 *Financial Risk & Fraud Exposure*
 - Fraud distribution by payment method (which methods are high-risk)
 - Fraud concentration by customer segment and risk band
-- Merchant risk rating impact on fraud transactions
+- Higher-risk merchants show disproportionately higher chargeback exposure.
 - Chargeback rate by merchant category
 - Total chargeback value and recovery amount
 - Unrecovered chargeback exposure
