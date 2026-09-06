@@ -15,39 +15,37 @@ The analysis spans:
 - **Business Outcome:** Actionable findings tied to financial and operational impact, with recommendations prioritized by business value
 
 ---
-
 ## 💡 Business Problem
 
-The fintech platform faces multiple overlapping challenges:
+### 👥 Customer Engagement & Quality
+- Which customer segments and acquisition channels are generating the strongest **customer engagement and transaction value**?
+- Where is NexaPay experiencing **low customer activity or weak engagement**, creating opportunities for targeted retention and growth?
+- Which customer segments combine **high financial value with elevated risk exposure**, requiring differentiated customer strategies?
 
-**Customer Engagement & Quality**
-- Which acquisition channels deliver customers that actually transact?
-- How are high-value customers distributed across segments?
-- Is customer tenure predictive of transaction volume or fraud risk?
+### 💳 Transaction Performance & Reliability
+- Where is NexaPay losing transaction value through **failed, pending, or reversed payments**?
+- Which payment methods and transaction types are creating the greatest **payment reliability and failure risk**?
+- Are transaction failures concentrated in specific payment patterns, creating opportunities to **improve payment success and reduce value leakage**?
 
-**Transaction Performance & Reliability**
-- What is the true transaction success rate?
-- Which payment methods/channels fail most often?
-- Are transaction failures concentrated in specific combinations (channel + payment method)?
-- How does transaction size affect success probability?
+### 🏪 Merchant Impact & Risk
+- Which merchants, categories, and merchant tiers are driving the greatest **commercial value for NexaPay**?
+- Are NexaPay's highest-value merchants also generating **disproportionate fraud, chargeback, or transaction-failure exposure**?
+- Which merchant relationships represent the greatest combination of **commercial opportunity and operational or financial risk**?
 
-**Merchant Impact & Risk**
-- Which merchants generate the highest transaction value?
-- Do high-value merchants also carry proportionally high fraud/chargeback exposure?
-- Which merchant categories are most strategically important?
-- Are merchant risk ratings predictive of payment failures?
+### 🛡️ Fraud & Risk
+- Where is NexaPay facing the greatest **financial exposure from fraudulent transactions**?
+- Which payment methods, transaction types, customer segments, and merchant categories are driving **disproportionate fraud losses**?
+- Which areas should receive priority risk controls based on **financial impact rather than transaction volume alone**?
 
-**Financial Exposure: Fraud & Chargebacks**
-- Where is fraud concentrated (by payment method, customer segment, merchant)?
-- How much financial exposure do chargebacks represent?
-- What is the chargeback recovery rate, and which reasons create the greatest losses?
-- Does fraud flag distribution align with actual financial impact?
+### 💰 Chargebacks & Financial Recovery
+- How much financial value is NexaPay **losing or putting at risk through chargebacks**?
+- Which chargeback reasons, payment methods, and merchant categories are responsible for the greatest **unrecovered losses**?
+- Where can NexaPay improve **chargeback prevention and recovery** to reduce financial leakage?
 
-**Operational Pressure: Support**
-- What issue categories drive the most support volume?
-- Which issues take longest to resolve?
-- Is customer satisfaction correlated with resolution time?
-- Do customers with failed transactions generate proportionally more support tickets?
+### 🎧 Support & Customer Experience
+- Which customer issues are creating the greatest **operational pressure on NexaPay's support function**?
+- Which issues and priorities are driving **longer resolution times and lower customer satisfaction**?
+- To what extent are payment failures contributing to **additional support demand and customer friction**?
 
 ---
 
