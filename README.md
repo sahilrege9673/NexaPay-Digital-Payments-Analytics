@@ -65,24 +65,24 @@ The fintech platform faces multiple overlapping challenges:
 - Protect transaction value while improving reliability by understanding how transaction size and payment behavior relate to transaction outcomes and financial exposure.
 
 ### 🏪 Merchants & Categories
-- Identify strategically important merchants (high volume + high value)
-- Evaluate merchant category performance and risk concentration
-- Understand merchant tier value contributions
+- Optimize merchant portfolio performance by identifying merchants, categories, and merchant tiers that contribute materially to transaction volume and transaction value.
+- Prioritize strategic merchant relationships by distinguishing high-volume, high-value merchants from merchants with weaker commercial contribution or elevated risk exposure.
+- Identify concentration and performance risks across merchant categories and tiers so that management can better allocate commercial, operational, and risk-management resources.
 
 ### 🛡️ Fraud & Risk
-- Quantify fraud exposure by dimension (payment method, customer segment, merchant, transaction type)
-- Identify high-risk customer and merchant combinations
-- Move from transaction-level fraud flags to financial impact
+- Minimize financial exposure from fraudulent activity by quantifying where fraud is concentrated across payment methods, transaction types, customer segments, merchants, and risk bands.
+-Improve risk prioritization by moving beyond the number of fraudulent transactions to assess the financial value and concentration of fraud exposure.
+- Identify risk patterns requiring intervention by determining which customer, merchant, payment, and transaction combinations contribute disproportionately to fraud exposure, enabling more targeted risk controls.
 
 ### 💰 Chargebacks & Financial Recovery
-- Quantify total chargeback exposure and recovery performance
-- Identify reasons creating the greatest unrecovered losses
-- Analyze merchant categories with highest chargeback concentration
+- Reduce financial losses associated with chargebacks by quantifying chargeback exposure, recovery performance, and the portion of disputed value that remains unrecovered.
+- Improve recovery effectiveness by identifying chargeback reasons, merchant categories, and other business dimensions associated with higher levels of unrecovered financial exposure.
+- Support loss-prevention decisions by identifying where chargeback concentration and weak recovery performance create the greatest potential financial impact.
 
 ### 🎧 Support & Customer Experience
-- Analyze support workload by issue category
-- Evaluate resolution time and customer satisfaction correlation
-- Connect failed transactions to support ticket volume
+- Improve customer experience and operational efficiency by identifying the issues, priorities, and channels generating the greatest support workload.
+- Reduce customer-impacting friction by evaluating whether transaction failures and payment-related issues are contributing materially to support demand.
+- Improve service performance by assessing the relationship between resolution time, ticket priority, workload, and customer satisfaction to identify opportunities for faster and more effective issue resolution.
 
 ---
 
