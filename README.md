@@ -30,7 +30,7 @@
 
 ## Executive summary
 
-NexaPay is a synthetic digital-payments analytics project that demonstrates an end-to-end analytical workflow and the type of work expected of a Data Analyst / BI Analyst in a fintech environment.
+NexaPay is a synthetic digital-payments analytics project that demonstrates an end-to-end analytical workflow .
 
 Objective: show how to move from raw operational data to decision-ready business insight — not just a dashboard.
 
