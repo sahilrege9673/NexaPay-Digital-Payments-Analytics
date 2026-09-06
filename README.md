@@ -55,16 +55,14 @@ The fintech platform faces multiple overlapping challenges:
 
 ### 👥 Customer & Acquisition
 - Optimize customer growth and engagement by determining which customer segments and acquisition channels generate the strongest combination of customer activity, transaction engagement, and financial value.
-
 - Improve customer portfolio quality by identifying segments and cohorts with elevated risk exposure, low engagement, or weaker transaction performance.
-
 - Enable targeted customer strategies by linking customer characteristics, acquisition sources, transaction behavior, and risk exposure to distinguish high-value, high-engagement, and high-risk customer groups
 
 
 ### 💳 Transactions & Payment Methods
-- Evaluate transaction success rates and identify high-failure combinations
-- Analyze payment method and channel performance
-- Understand transaction value distribution and size-dependent risk patterns
+- Improve payment transaction performance by identifying the primary drivers of successful, failed, pending, and reversed transactions across payment methods, transaction types, and other operational dimensions.
+- Reduce transaction failure and operational friction by isolating combinations of payment method, transaction characteristics, and merchant activity associated with disproportionately high failure rates.
+- Protect transaction value while improving reliability by understanding how transaction size and payment behavior relate to transaction outcomes and financial exposure.
 
 ### 🏪 Merchants & Categories
 - Identify strategically important merchants (high volume + high value)
