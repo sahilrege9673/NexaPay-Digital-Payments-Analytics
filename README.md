@@ -132,13 +132,13 @@ Rigorous data validation was performed before any business analysis:
 - **Transaction Fees:** 0 negative fees
 - **Fraud Scores:** All scores within valid 0–100 range
 - **Account Status:** Verified against valid statuses (Active, Dormant, Closed, Frozen)
-- **Transaction Status:** Verified against valid statuses (Success, Failed, Pending)
+- **Transaction Status:** Verified against valid statuses (Success, Failed, Pending,Reversed)
 - **KYC Status:** Verified against valid categories (Verified, Pending, Rejected)
 
 **Cross-Table Consistency**
 - Customer-Account ownership: 100% consistency
 - Transaction-Customer-Account chain: All transactions linked to valid account owner
-- Fraud flag distribution: 3.45% of transactions flagged, higher concentration in specific payment methods
+- Fraud flag distribution: 3.45% of transactions flagged Fraud , higher concentration in specific payment methods
 
 **Result:** Dataset passed structural, integrity, range, and consistency validation with no critical issues identified for analysis.
 
@@ -193,7 +193,7 @@ Python notebooks provide exploratory data analysis and business validation:
 ### `01_Data_Connection_Cleaning_Validation.ipynb`
 - Established PostgreSQL connection via SQLAlchemy
 - Extracted full datasets into Pandas DataFrames
-- Validated row counts: 120K customers, 1.5M transactions, 30K chargebacks
+- Validated row counts: 120K customers, 2.0M transactions, 30K chargebacks
 - Foreign key validation: Confirmed 100% referential integrity
 - Data type consistency and NULL value checks
 - Categorical value verification (transaction status, channels, payment methods)
