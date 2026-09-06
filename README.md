@@ -109,7 +109,7 @@ Customers → Support Tickets
 
 ---
 
-## ✅ Data Quality & Validation
+##  Data Quality & Validation
 
 Rigorous data validation was performed before any business analysis:
 
