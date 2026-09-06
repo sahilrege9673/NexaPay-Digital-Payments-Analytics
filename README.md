@@ -93,7 +93,7 @@ The analysis spans:
 | **Customers** | 120,000 | Customer profiles with segment, income, risk band, KYC status, acquisition source |
 | **Accounts** | 200,000+ | Customer accounts with type, status, balance, and credit limits |
 | **Merchants** | 50,000+ | Merchant profiles with category, tier, risk rating, settlement cycle |
-| **Transactions** | 1,500,000 | Payment events with channel, method, amount, status, fraud score |
+| **Transactions** | 2,000,000 | Payment events with channel, method, amount, status, fraud score |
 | **Chargebacks** | 30,000+ | Disputed transactions with reason, amount, recovery status |
 | **Support Tickets** | 100,000+ | Customer support cases with category, priority, resolution time, satisfaction |
 
