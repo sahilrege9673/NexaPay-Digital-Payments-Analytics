@@ -4,14 +4,6 @@
 
 ---
 
-## 📊 Executive Dashboard Preview
-
-![NexaPay Executive Overview Dashboard](PowerBi/01_OverView.png)
-
-**What it reveals:** Real-time business health metrics, transaction success/failure trends, revenue composition, and key performance indicators that drive decision-making across the organization.
-
----
-
 ## Executive Summary
 
 NexaPay is a fictional fintech payments platform managing 120,000+ customers across diverse segments with 1.5M transactions. This end-to-end analytics project investigates the complete transaction lifecycle—from customer acquisition through payment success, fraud detection, chargeback recovery, and customer support—to identify operational inefficiencies and hidden financial exposure.
@@ -557,7 +549,7 @@ NexaPay-Digital-Payments-Analytics/
 
 ## 🎓 Key Analytical Techniques Demonstrated
 
-✅ **SQL Mastery**
+ **SQL Mastery**
 - Complex JOINs across 6 tables maintaining referential integrity
 - CTEs for hierarchical data analysis
 - Window functions for ranking and trend analysis
@@ -566,27 +558,27 @@ NexaPay-Digital-Payments-Analytics/
 - Date/time analysis with date_trunc() and interval calculations
 - Fraud rate calculations and concentration analysis
 
-✅ **Data Quality Rigor**
+ **Data Quality Rigor**
 - Comprehensive validation framework (completeness, consistency, validity)
 - Referential integrity verification across all relationships
 - Categorical value standardization and validation
 - Duplicate detection and reconciliation
 - Null value handling and impact assessment
 
-✅ **Business Intelligence**
+ **Business Intelligence**
 - Multi-dimensional business analysis (customer, transaction, merchant, risk, support)
 - Cross-domain correlation analysis (failed transactions ↔ support load)
 - Financial impact quantification (chargeback recovery rates, unrecovered losses)
 - Root cause decomposition enabling targeted problem-solving
 - Actionable insights with clear business implications
 
-✅ **Python Data Analysis**
+ **Python Data Analysis**
 - Database connectivity and data extraction at scale (1.5M+ records)
 - Data integrity validation in Python
 - Exploratory analysis and pattern discovery
 - Business logic validation through multiple analytical lenses
 
-✅ **Executive Communication**
+ **Executive Communication**
 - Dashboard design focused on decision-maker needs
 - Clear visualization hierarchy (executives → detail)
 - Findings connected to business impact, not just metrics
@@ -595,8 +587,6 @@ NexaPay-Digital-Payments-Analytics/
 ---
 
 
-
----
 
 **Project Completed:** September 2026  
 **Repository:** [NexaPay-Digital-Payments-Analytics](https://github.com/sahilrege9673/NexaPay-Digital-Payments-Analytics)
