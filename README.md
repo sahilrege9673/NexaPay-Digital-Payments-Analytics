@@ -444,7 +444,7 @@ Python notebooks provide exploratory data analysis and business validation:
 
 | Finding | Business Implication | Recommended Action |
 |---------|----------------------|-------------------|
-| Digital acquisition channel shows higher engagement than Branch | Opportunity to optimize marketing spend and channel mix | Evaluate cost-per-active-customer by channel; shift marketing budget toward higher-engagement channels; develop digital-first customer onboarding |
+| Digital acquisition channel shows higher engagement than Branch | Opportunity to optimize marketing spend and channel mix | Evaluate cost-per-active-customer by channel; Evaluate acquisition efficiency by channel using customer engagement and transaction behavior; prioritize higher-performing channels for further investigation and optimization. |
 | Specific payment methods (e.g., UPI) combine high volume + low fraud rate | Scalable, lower-risk growth opportunity | Create incentive programs for UPI adoption; promote as preferred method in customer communication |
 | High-value merchants concentrated in specific categories | Revenue concentration risk; opportunity for category expansion | Identify merchant categories with lower penetration; develop targeted merchant acquisition strategy for high-margin categories |
 | Affluent customer segment shows high transaction value but lower frequency | Untapped engagement opportunity in high-value segment | Analyze affluent customer behavior; develop segment-specific engagement programs to increase transaction frequency |
