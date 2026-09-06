@@ -15,72 +15,79 @@ The analysis spans:
 - **Business Outcome:** Actionable findings tied to financial and operational impact, with recommendations prioritized by business value
 
 ---
+
 ## 💡 Business Problem
 
+NexaPay faces the challenge of growing its digital payments business while maintaining **reliable transactions, healthy customer engagement, merchant performance, and financial risk control**.
+
+As transaction activity scales, weaknesses in any part of the payment ecosystem can lead to **transaction value leakage, customer friction, fraud losses, chargeback exposure, and increased support workload**.
+
+The business needs to understand where these problems are concentrated and which areas require the greatest management attention.
+
 ### 👥 Customer Engagement & Quality
-- Which customer segments and acquisition channels are generating the strongest **customer engagement and transaction value**?
-- Where is NexaPay experiencing **low customer activity or weak engagement**, creating opportunities for targeted retention and growth?
-- Which customer segments combine **high financial value with elevated risk exposure**, requiring differentiated customer strategies?
+- Customer growth does not necessarily translate into active and valuable payment users.
+- Customer value and engagement may vary significantly across segments and acquisition channels.
+- High-value customer groups may also carry different levels of financial risk.
 
 ### 💳 Transaction Performance & Reliability
-- Where is NexaPay losing transaction value through **failed, pending, or reversed payments**?
-- Which payment methods and transaction types are creating the greatest **payment reliability and failure risk**?
-- Are transaction failures concentrated in specific payment patterns, creating opportunities to **improve payment success and reduce value leakage**?
+- Failed, pending, and reversed transactions can create transaction-value leakage and customer friction.
+- Payment performance may vary significantly across payment methods and transaction types.
+- Concentrated failure patterns may indicate specific payment pathways requiring operational improvement.
 
 ### 🏪 Merchant Impact & Risk
-- Which merchants, categories, and merchant tiers are driving the greatest **commercial value for NexaPay**?
-- Are NexaPay's highest-value merchants also generating **disproportionate fraud, chargeback, or transaction-failure exposure**?
-- Which merchant relationships represent the greatest combination of **commercial opportunity and operational or financial risk**?
+- Merchant contribution varies significantly across transaction volume, value, categories, and tiers.
+- High-value merchants can also create concentrated operational, fraud, or chargeback exposure.
+- NexaPay needs to distinguish commercially important merchants from relationships requiring greater risk attention.
 
 ### 🛡️ Fraud & Risk
-- Where is NexaPay facing the greatest **financial exposure from fraudulent transactions**?
-- Which payment methods, transaction types, customer segments, and merchant categories are driving **disproportionate fraud losses**?
-- Which areas should receive priority risk controls based on **financial impact rather than transaction volume alone**?
+- Fraud creates direct financial exposure and can undermine customer trust.
+- Fraud exposure may be concentrated across specific payment methods, transaction types, customer segments, and merchants.
+- Transaction counts alone may not reveal where the greatest financial risk exists.
 
 ### 💰 Chargebacks & Financial Recovery
-- How much financial value is NexaPay **losing or putting at risk through chargebacks**?
-- Which chargeback reasons, payment methods, and merchant categories are responsible for the greatest **unrecovered losses**?
-- Where can NexaPay improve **chargeback prevention and recovery** to reduce financial leakage?
+- Chargebacks create financial exposure through disputed transaction value and unrecovered losses.
+- Certain chargeback reasons and merchant categories may contribute disproportionately to financial leakage.
+- Recovery performance needs to be understood alongside chargeback exposure to identify the greatest loss areas.
 
 ### 🎧 Support & Customer Experience
-- Which customer issues are creating the greatest **operational pressure on NexaPay's support function**?
-- Which issues and priorities are driving **longer resolution times and lower customer satisfaction**?
-- To what extent are payment failures contributing to **additional support demand and customer friction**?
+- Payment and service issues create customer support demand and operational pressure.
+- High-resolution times can negatively affect customer satisfaction and increase unresolved workload.
+- NexaPay needs to understand how payment-related problems translate into customer-service impact.
 
----
-
+--
 ## 🎯 Business Objectives
 
-### 👥 Customer & Acquisition
-- Optimize customer growth and engagement by determining which customer segments and acquisition channels generate the strongest combination of customer activity, transaction engagement, and financial value.
-- Improve customer portfolio quality by identifying segments and cohorts with elevated risk exposure, low engagement, or weaker transaction performance.
-- Enable targeted customer strategies by linking customer characteristics, acquisition sources, transaction behavior, and risk exposure to distinguish high-value, high-engagement, and high-risk customer groups
+The objective of this project is to use **SQL, Python, and Power BI** to quantify NexaPay's operational and financial performance, identify the primary drivers of value leakage and risk, and translate the findings into actionable business priorities.
 
+### 👥 Customer & Acquisition
+- Identify the customer segments and acquisition channels generating the strongest engagement and transaction value.
+- Identify low-engagement and high-risk customer groups requiring targeted attention.
+- Assess where customer value and risk are concentrated across the portfolio.
 
 ### 💳 Transactions & Payment Methods
-- Improve payment transaction performance by identifying the primary drivers of successful, failed, pending, and reversed transactions across payment methods, transaction types, and other operational dimensions.
-- Reduce transaction failure and operational friction by isolating combinations of payment method, transaction characteristics, and merchant activity associated with disproportionately high failure rates.
-- Protect transaction value while improving reliability by understanding how transaction size and payment behavior relate to transaction outcomes and financial exposure.
+- Quantify transaction performance across successful, failed, pending, and reversed outcomes.
+- Identify payment methods and transaction types contributing most to failure exposure.
+- Prioritize payment pathways where reliability improvements could protect transaction value and reduce customer friction.
 
 ### 🏪 Merchants & Categories
-- Optimize merchant portfolio performance by identifying merchants, categories, and merchant tiers that contribute materially to transaction volume and transaction value.
-- Prioritize strategic merchant relationships by distinguishing high-volume, high-value merchants from merchants with weaker commercial contribution or elevated risk exposure.
-- Identify concentration and performance risks across merchant categories and tiers so that management can better allocate commercial, operational, and risk-management resources.
+- Identify merchants, categories, and tiers contributing the greatest transaction value and activity.
+- Evaluate commercial value alongside fraud, chargeback, and transaction-failure exposure.
+- Identify merchant segments requiring commercial, operational, or risk-management attention.
 
 ### 🛡️ Fraud & Risk
-- Minimize financial exposure from fraudulent activity by quantifying where fraud is concentrated across payment methods, transaction types, customer segments, merchants, and risk bands.
--Improve risk prioritization by moving beyond the number of fraudulent transactions to assess the financial value and concentration of fraud exposure.
-- Identify risk patterns requiring intervention by determining which customer, merchant, payment, and transaction combinations contribute disproportionately to fraud exposure, enabling more targeted risk controls.
+- Quantify fraud exposure across payment methods, transaction types, customer segments, and merchants.
+- Identify areas contributing disproportionately to fraud-related financial exposure.
+- Prioritize risk areas based on financial impact rather than transaction volume alone.
 
 ### 💰 Chargebacks & Financial Recovery
-- Reduce financial losses associated with chargebacks by quantifying chargeback exposure, recovery performance, and the portion of disputed value that remains unrecovered.
-- Improve recovery effectiveness by identifying chargeback reasons, merchant categories, and other business dimensions associated with higher levels of unrecovered financial exposure.
-- Support loss-prevention decisions by identifying where chargeback concentration and weak recovery performance create the greatest potential financial impact.
+- Quantify total chargeback exposure, recovery performance, and unrecovered value.
+- Identify the chargeback reasons and merchant categories driving the greatest financial losses.
+- Identify opportunities to reduce chargeback leakage and improve recovery effectiveness.
 
 ### 🎧 Support & Customer Experience
-- Improve customer experience and operational efficiency by identifying the issues, priorities, and channels generating the greatest support workload.
-- Reduce customer-impacting friction by evaluating whether transaction failures and payment-related issues are contributing materially to support demand.
-- Improve service performance by assessing the relationship between resolution time, ticket priority, workload, and customer satisfaction to identify opportunities for faster and more effective issue resolution.
+- Identify the issues and channels generating the greatest support workload.
+- Evaluate resolution time and customer satisfaction to identify service-performance gaps.
+- Assess the relationship between payment failures and support demand to identify opportunities to reduce customer friction.
 
 ---
 
