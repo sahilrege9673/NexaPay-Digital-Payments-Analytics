@@ -54,9 +54,9 @@ The fintech platform faces multiple overlapping challenges:
 ## 🎯 Business Objectives
 
 ### 👥 Customer & Acquisition
-- Understand customer segmentation and activity patterns
-- Evaluate acquisition channels based on customer quality and transaction engagement
-- Identify high-risk customer cohorts and their financial exposure
+- Optimize customer growth and engagement by determining which customer segments and acquisition channels generate the strongest combination of customer activity, transaction engagement, and financial value.
+- Improve customer portfolio quality by identifying segments and cohorts with elevated risk exposure, low engagement, or weaker transaction performance.
+-Enable targeted customer strategies by linking customer characteristics, acquisition sources, transaction behavior, and risk exposure to distinguish high-value, high-engagement, and high-risk customer groups
 
 ### 💳 Transactions & Payment Methods
 - Evaluate transaction success rates and identify high-failure combinations
