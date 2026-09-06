@@ -1,44 +1,95 @@
 # NexaPay | Digital Payments Analytics
 
-> End-to-end fintech analytics case study analyzing 1.5M+ transactions across customer behavior, payment performance, fraud exposure, chargebacks, and support operations using SQL, Python, and Power BI
+> **End-to-end fintech analytics case study analyzing 1.5M+ transactions across customer behavior, payment performance, fraud exposure, chargebacks, and support operations using SQL, Python, and Power BI.**
+
+---
+
+## 📊 Executive Dashboard Preview
+
+![NexaPay Executive Overview Dashboard](PowerBi/01_OverView.png)
+
+**What it reveals:** Real-time business health metrics, transaction success/failure trends, revenue composition, and key performance indicators that drive decision-making across the organization.
 
 ---
 
 ## Executive Summary
 
-NexaPay is a fictional but realistic digital payments platform operating in the consumer and merchant payments sector. The product provides transaction processing, settlement, and merchant services across web and mobile channels, supporting card rails, UPI-like instant payments, bank transfers, and third-party wallet integrations. The business historically excels in volume-driven, low-ticket digital payments (strong market presence in consumer P2P and retail micro-payments) while facing operational and financial stress in higher-value merchant segments and dispute resolution workflows. Key operational challenges include uneven reliability across specific channel+payment-method combinations, concentrated chargeback exposure among a small set of merchants, and a support function stretched by transaction-failure driven ticket volumes.
+NexaPay is a fictional fintech payments platform managing 120,000+ customers across diverse segments with 1.5M transactions. This end-to-end analytics project investigates the complete transaction lifecycle—from customer acquisition through payment success, fraud detection, chargeback recovery, and customer support—to identify operational inefficiencies and hidden financial exposure.
 
-This repository documents a full analytics lifecycle to quantify those issues, connect them to financial impact, and produce prioritized, implementable actions that reduce revenue leakage, lower fraud and chargeback losses, and improve customer experience and operational efficiency.
-
----
-
-## Business Problem (Reframed as Real, Strategic Problems)
-
-1. Acquisition Channel ROI & Quality: Marketing and acquisition spend is optimized for volume (new signups) rather than value (active, transacting customers). The business lacks precise, data-driven visibility into which channels acquire high-LTV customers. This creates wasted spend, high churn among acquired cohorts, and missed opportunities to scale profitable channels.
-
-2. Payment Reliability & Revenue Leakage: Certain channel + payment-method combinations exhibit materially higher failure rates. This creates direct revenue leakage, double-processing risk, and elevated operational cost from retries and refunds. Without targeted remediation, the business will continue to lose net transaction value and suffer lower customer trust.
-
-3. Merchant Concentration & Systemic Exposure: A small number of merchants contribute a disproportionate share of transaction value. Any disruption (technical, operational, or fraud-related) at these merchants would cause outsized revenue impact and operational complexity.
-
-4. Fraud & Chargeback Financial Risk: Chargebacks and fraud are concentrated in specific payment methods and merchant categories. Low recovery rates on certain dispute reasons magnify unrecovered losses and compress margins. The current controls and monitoring are not fine-grained enough to isolate high-loss pathways quickly.
-
-5. Operational Pressure & Customer Experience Degradation: Failed transactions drive support volume and prolonged resolution times, lowering customer satisfaction and increasing churn risk. Support resource allocation is reactive rather than predictive, creating a cyclical escalation of operational cost and customer dissatisfaction.
-
-Each of these is framed as a measurable business risk (revenue at risk, cost to serve, NPS/retention impact) and forms the basis for prioritized analytics and remediation activity.
+The analysis spans:
+- **Data Foundation:** 6 core tables (Customers, Accounts, Merchants, Transactions, Chargebacks, Support Tickets) validated for integrity and quality
+- **Analytical Scope:** Customer engagement, transaction performance, merchant impact, fraud/chargeback exposure, and support workload
+- **Tools Used:** PostgreSQL (data modeling & validation), Python (exploratory analysis), Power BI (6-page executive dashboard)
+- **Business Outcome:** Actionable findings tied to financial and operational impact, with recommendations prioritized by business value
 
 ---
 
-## Business Objectives (Business-focused, Measurable, and Strategic)
+## 💡 Business Problem
 
-- Maximize Customer Lifetime Value (LTV) through optimized acquisition: identify and prioritize acquisition channels that deliver high-frequency, high-value transacting customers, and reduce cost-per-active-customer by 15–30%.
-- Recover lost revenue and reduce transaction failure rate: identify top failure pathways and reduce failure rates in target pathways by 30% within the next quarter, recovering direct transaction value and reducing support costs.
-- Reduce net chargeback exposure: increase chargeback recovery rate and reduce unrecovered chargeback value by 25% through targeted merchant controls, dispute prioritization, and merchant education.
-- De-risk merchant concentration: quantify top-merchant exposure and implement monitoring/contingency plans for top 20 merchants to minimize single points of failure.
-- Strengthen fraud detection & prevention: convert transaction-level fraud signals into financial-risk prioritization — focus controls where monetary exposure is largest, not just where flag counts are highest.
-- Improve operational efficiency and customer satisfaction: reduce average support resolution time for transaction-related tickets by 20% and increase satisfaction (CSAT/NPS proxies) by addressing root technical causes.
-- Deliver executive-grade intelligence: produce a 6-page Power BI suite providing top-level KPIs, drillable root cause analysis, and automated periodic insights to inform product, risk, finance, and merchant operations.
+The fintech platform faces multiple overlapping challenges:
 
-Each objective maps to measurable KPIs (failure rate, chargeback $ unrecovered, LTV by channel, average resolution time, CSAT) and serves as a target for both analytics and implementation work.
+**Customer Engagement & Quality**
+- Which acquisition channels deliver customers that actually transact?
+- How are high-value customers distributed across segments?
+- Is customer tenure predictive of transaction volume or fraud risk?
+
+**Transaction Performance & Reliability**
+- What is the true transaction success rate?
+- Which payment methods/channels fail most often?
+- Are transaction failures concentrated in specific combinations (channel + payment method)?
+- How does transaction size affect success probability?
+
+**Merchant Impact & Risk**
+- Which merchants generate the highest transaction value?
+- Do high-value merchants also carry proportionally high fraud/chargeback exposure?
+- Which merchant categories are most strategically important?
+- Are merchant risk ratings predictive of payment failures?
+
+**Financial Exposure: Fraud & Chargebacks**
+- Where is fraud concentrated (by payment method, customer segment, merchant)?
+- How much financial exposure do chargebacks represent?
+- What is the chargeback recovery rate, and which reasons create the greatest losses?
+- Does fraud flag distribution align with actual financial impact?
+
+**Operational Pressure: Support**
+- What issue categories drive the most support volume?
+- Which issues take longest to resolve?
+- Is customer satisfaction correlated with resolution time?
+- Do customers with failed transactions generate proportionally more support tickets?
+
+---
+
+## 🎯 Business Objectives
+
+### 👥 Customer & Acquisition
+- Understand customer segmentation and activity patterns
+- Evaluate acquisition channels based on customer quality and transaction engagement
+- Identify high-risk customer cohorts and their financial exposure
+
+### 💳 Transactions & Payment Methods
+- Evaluate transaction success rates and identify high-failure combinations
+- Analyze payment method and channel performance
+- Understand transaction value distribution and size-dependent risk patterns
+
+### 🏪 Merchants & Categories
+- Identify strategically important merchants (high volume + high value)
+- Evaluate merchant category performance and risk concentration
+- Understand merchant tier value contributions
+
+### 🛡️ Fraud & Risk
+- Quantify fraud exposure by dimension (payment method, customer segment, merchant, transaction type)
+- Identify high-risk customer and merchant combinations
+- Move from transaction-level fraud flags to financial impact
+
+### 💰 Chargebacks & Financial Recovery
+- Quantify total chargeback exposure and recovery performance
+- Identify reasons creating the greatest unrecovered losses
+- Analyze merchant categories with highest chargeback concentration
+
+### 🎧 Support & Customer Experience
+- Analyze support workload by issue category
+- Evaluate resolution time and customer satisfaction correlation
+- Connect failed transactions to support ticket volume
 
 ---
 
@@ -66,197 +117,357 @@ Customers → Support Tickets
 
 ---
 
-## Data Quality & Validation
+## ✅ Data Quality & Validation
 
-We performed an enterprise-grade data validation program before any business analysis. This section summarizes the validation methodology, the tests run, outcomes, and business implications.
+Rigorous data validation was performed before any business analysis:
 
-What we validated (method + rationale):
+**Structural Integrity**
+- Duplicate ID detection: All primary keys verified as unique (0 duplicates across all tables)
+- Foreign key validation: 100% referential integrity (0 orphaned transactions, chargebacks, or account relationships)
+- Missing value analysis: No NULL values in critical business columns
+- Data type consistency: All columns validated for correct type casting
 
-- Structural Integrity
-  - Primary key uniqueness checks (COUNT vs COUNT DISTINCT) to detect duplicates — ensures row-level identity for joins and event tracing.
-  - Foreign key referential checks to ensure there are no orphaned records across Customers, Accounts, Transactions, Chargebacks, and Support Tickets — critical for accurate cross-table joins.
-  - Data type validation and casting tests to ensure numeric/date/text columns are usable for aggregations and time-series analysis.
+**Value Range Validation**
+- **Age:** 0 invalid records (outside 18–100 range)
+- **Customer Tenure:** 0 negative values
+- **Transaction Amounts:** 0 zero/negative amounts
+- **Transaction Fees:** 0 negative fees
+- **Fraud Scores:** All scores within valid 0–100 range
+- **Account Status:** Verified against valid statuses (Active, Dormant, Closed, Frozen)
+- **Transaction Status:** Verified against valid statuses (Success, Failed, Pending)
+- **KYC Status:** Verified against valid categories (Verified, Pending, Rejected)
 
-- Value & Range Validation
-  - Domain checks for categorical fields (transaction status, account status, KYC status) against an approved dictionary to avoid category drift.
-  - Range checks for numeric fields (fraud_score within 0–100, transaction amounts > 0, age between 18–100) to protect against skewed aggregations.
+**Cross-Table Consistency**
+- Customer-Account ownership: 100% consistency
+- Transaction-Customer-Account chain: All transactions linked to valid account owner
+- Fraud flag distribution: 3.45% of transactions flagged, higher concentration in specific payment methods
 
-- Completeness & Missingness
-  - Column-level null analyses and critical-column completeness gates (e.g., account_id on transactions cannot be NULL).
-  - Investigated and documented columns with expected-but-missing values and applied business-default strategies where appropriate.
-
-- Referential & Cross-Table Consistency
-  - Verified Customer → Account → Transaction chain for 100% consistency.
-  - Cross-checked chargeback records to ensure they map to valid transactions and merchant records.
-
-- Anomaly Detection & Distributional Checks
-  - Statistical profiling (percentiles, standard deviation) to detect outliers in transaction amounts, fee distributions, and resolution times.
-  - Time-series sanity checks for sudden ingestion spikes indicating batch duplicates or reprocessing.
-
-Tools & Approach
-- SQL-based validation scripts (see 02_Data_Cleaning_Validation.sql) for deterministic checks.
-- Python notebooks (01_Data_Connection_Cleaning_Validation.ipynb) to reproduce checks, produce profiles, and store artifacts for audit.
-- Unit checks and summary reports exported for dashboard integration.
-
-Outcomes (summary)
-- No duplicate primary keys across core tables.
-- Referential integrity confirmed: no orphaned transactions or chargebacks.
-- No NULLs in business-critical columns after cleaning; documented edge-case columns retained with guardrails.
-- Fraud score, age, amount ranges validated and within expected bounds.
-
-Business implication: The dataset is production-ready for downstream analytics and BI consumption. High-integrity data enables accurate KPI computation and reliable root-cause analysis.
+**Result:** Dataset deemed production-ready with no data quality issues requiring remediation.
 
 ---
 
-## SQL Analysis (Detailed file-level breakdown & techniques)
+## 🔍 SQL Analysis
 
-### 01_Data_Loading.sql
-- Created a normalized schema with explicit PK/FK constraints and partitioning strategies for large tables (transactions) to improve query performance.
-- Bulk-load optimizations (COPY or optimized INSERT batching) and index creation to accelerate downstream aggregations.
-- Row-count and checksum validations to confirm ingestion completeness.
-- Produced audit tables capturing load timestamps and file-level provenance for traceability.
+Comprehensive SQL analysis organized across four layers of business inquiry:
 
-Why this matters: A performant, auditable data foundation enables reproducible analytics and supports frequent refreshes for BI.
+### 1. **Data Loading** (`01_Data_Loading.sql`)
+- Created normalized schema with 6 core tables
+- Established primary/foreign key constraints
+- Loaded 1.5M+ transaction records and supporting dimensions
+- Validated successful data ingestion via row counts
 
-### 02_Data_Cleaning_Validation.sql
-- Deduplication logic using windowing (ROW_NUMBER() over partition by id ORDER BY ingestion_ts DESC) to keep canonical rows.
-- Categorical normalization (standardizing payment_method, channel, and status values) and mapping tables for consistent joins.
-- Referential integrity enforcement queries and creation of a cleaned `analytics.transactions_clean` table as the single source of truth for analysis.
-- Null-handling strategies and derived flags (e.g., `is_high_value`, `is_retry`) to simplify downstream queries.
+### 2. **Data Cleaning & Validation** (`02_Data_Cleaning_Validation.sql`)
+- Duplicate detection across all ID columns
+- NULL value analysis for each table
+- Categorical value verification (payment methods, channels, statuses)
+- Referential integrity checks (orphaned records, mismatched relationships)
+- Fraud flag and chargeback status distribution analysis
+- Created cleaned `analytics.transactions_clean` table for downstream analysis
 
-Business outcome: Clean, standardized tables reduced downstream join complexity and ensured that business metrics reflect reality rather than ingestion artifacts.
+### 3. **Business Analysis** (`03_Business_Analysis.sql`)
+Explored core business dimensions:
+- **Transaction Health:** Overall success/failure rates by channel, payment method, transaction type
+- **Customer Segmentation:** Transaction value and failure rates by customer segment and risk band
+- **Transaction Patterns:** High-value transaction failure analysis, failed transaction concentration by combination
+- **Merchant Performance:** Top merchants by transaction value, merchant category failure rates
+- **Account Utilization:** Account type usage, dormant account detection, inactive account activity
+- **Growth Trends:** Monthly transaction volume and value trends
+- **Risk Correlation:** Customer risk band vs. transaction value and fraud exposure
 
-### 03_Business_Analysis.sql
-- Business questions addressed: transaction health, customer segmentation, merchant performance, account utilization, growth trends, and risk correlations.
-- SQL techniques emphasized (glorified for robustness):
-  - Common Table Expressions (CTEs) to structure complex multi-step logic and make queries readable and maintainable.
-  - Window functions (ROW_NUMBER, RANK, SUM() OVER(PARTITION BY ...)) for cohorting, top-N merchants, and moving-window trend calculations.
-  - CASE expressions for business-rule encoding (e.g., high-risk vs low-risk labeling, tenure buckets).
-  - Date-truncation and time-bucketing for monthly/weekly trends and seasonality checks.
-  - Ratio and weighted-average calculations for accurate rate computation (fraud rate, success rate, chargeback per $ value).
-  - Efficient joins and semi-joins to avoid over-counting in multi-join scenarios.
+**SQL Techniques Used:** CTEs, CASE statements, window functions (SUM OVER), aggregations, JOINs, date truncation, ratio calculations
 
-What we produced: Executive-ready aggregates and drillable views that feed into the Power BI pages for KPIs and trend monitoring.
+### 4. **Advanced Business Analysis** (`04_Advanced_Business_Analysis.sql`)
+Deeper investigation into financial and operational exposure:
+- **Fraud Analysis:** Fraud concentration by payment method, customer segment, merchant risk rating
+- **Chargeback Dynamics:** Overall chargeback rate (0.39%), total chargeback value, recovery rate, unrecovered exposure by reason
+- **Merchant-Chargeback Correlation:** High-value merchants vs. chargeback exposure, merchant categories with highest unrecovered losses
+- **Support Operations:** Issue category volume and resolution time, customer satisfaction by resolution speed, correlation between failed transactions and support tickets
+- **Cross-Domain Analysis:** Risk merchant behavior, high-resolution-time impact on satisfaction, customer support patterns post-transaction failure
 
-### 04_Advanced_Business_Analysis.sql
-- Advanced analyses performed:
-  - Fraud concentration metrics by multidimensional slices (payment method × merchant category × customer risk band) with monetary-weighted impact.
-  - Chargeback financial modeling: exposure, recovery rate calculations, and unrecovered value decomposed by reason codes and merchant tiers.
-  - Cross-domain analyses linking failed transactions to support-ticket volumes and customer satisfaction measures.
-  - Multi-level aggregations and cohort survival-style analyses to quantify persistent risk across customer and merchant cohorts.
-- Advanced SQL patterns used: multi-level CTE pipelines, lateral joins for top-k breakdowns, sophisticated windowing for lag/lead analyses, and pivoted aggregations for dashboard-friendly feeding tables.
-
-Business outcome: Prioritized list of risk pathways with dollar-impact estimates enabling focused operational and product interventions.
+**Advanced Techniques:** Complex joins, multi-level aggregations, financial calculations (chargeback recovery %), customer journey analysis
 
 ---
 
-## Python Analysis (Detailed notebooks and engineering practices)
+## 🐍 Python Analysis
+
+Python notebooks provide exploratory data analysis and business validation:
 
 ### `01_Data_Connection_Cleaning_Validation.ipynb`
-- Engineered robust PostgreSQL connections using SQLAlchemy with environment-driven configuration (python-dotenv) for credentials and connection pooling.
-- Extracted datasets incrementally (chunked reads for large transaction tables) to avoid memory issues while ensuring reproducible snapshots for analysis.
-- Re-ran validation logic in Python to produce profiling artifacts, histograms, and a set of reproducible data quality reports exported as CSV/JSON to support audit and BI ingestion.
-- Implemented helper functions for common checks and applied unit-test-like assertions to fail fast if critical integrity checks regress.
+- Established PostgreSQL connection via SQLAlchemy
+- Extracted full datasets into Pandas DataFrames
+- Validated row counts: 120K customers, 1.5M transactions, 30K chargebacks
+- Foreign key validation: Confirmed 100% referential integrity
+- Data type consistency and NULL value checks
+- Categorical value verification (transaction status, channels, payment methods)
+
+**Libraries Used:** pandas, numpy, SQLAlchemy, python-dotenv
 
 ### `02_Business_Analysis.ipynb`
-- Performed exploratory analysis: segment-level revenue concentration, failure pattern discovery, correlation matrices (fraud score vs transaction amount vs risk band), and anomaly detection.
-- Built visualizations (Matplotlib/Seaborn) to validate trends and prepare narrative slides for stakeholders.
-- Exported analytical datasets and summarized tables to a folder consumed by Power BI for visualization and storytelling.
+- Exploratory data analysis across all business dimensions
+- Customer segmentation analysis
+- Transaction performance by channel/method/customer segment
+- Fraud and chargeback distribution analysis
+- Support ticket patterns and resolution analysis
+- Visualizations: distributions, correlations, trend analysis
+- Export results for Power BI integration
 
-Engineering practices and libraries: pandas for ETL-like transformations, numpy for numeric operations, SQLAlchemy for DB interaction, and modular notebook functions to support reusability.
-
----
-
-## Power BI Dashboard (6 pages) — meaning, purpose, and a short insight for each page
-
-### Page 1: Executive Overview
-*Business health at a glance. KPI scoreboard for leaders.*
-
-Key Insight: This page shows overall platform stability: total transactions, transaction value, average ticket, and net success rate. It highlights month-over-month momentum and quickly surfaces any regressions in success rate or sudden value drops that require executive attention.
-
-### Page 2: Customer Analysis
-*Segmentation, acquisition quality, and LTV signals.*
-
-Key Insight: Reveals which customer segments and acquisition channels deliver disproportionate transaction value and sustained engagement. It identifies high-LTV cohorts and channels with poor retention so marketing and growth can reallocate investment to higher-quality sources.
-
-### Page 3: Transactions & Merchant Analysis
-*Payment reliability, method/channel performance, and merchant contribution.*
-
-Key Insight: Exposes the weakest channel + payment-method combinations and the merchant categories with the largest value concentration and failure rates. This page is used to prioritize engineering remediations and merchant engagement strategies.
-
-### Page 4: Fraud & Risk Analysis
-*Monetary exposure, fraud concentration, and chargeback trends.*
-
-Key Insight: Surfaces where fraud is producing the greatest financial harm (not just highest flag counts). It shows payment methods and merchant categories that drive net loss and helps prioritize fraud-detection tuning and merchant-level controls.
-
-### Page 5: Support Tickets & Customer Experience
-*Operational workload, resolution efficiency, and satisfaction correlations.*
-
-Key Insight: Correlates failed transactions to support volume and tracks resolution time vs satisfaction. It identifies high-effort ticket types for automation or self-service and quantifies the customer impact of slow resolutions.
-
-### Page 6: Root Cause Analysis
-*Drillable, dimensional decomposition for remediation planning.*
-
-Key Insight: Enables rapid drill-down from KPI regressions to root causes by decomposing failed transaction value across payment method, merchant category, customer segment, channel, and risk band — enabling precise operational tickets to engineering, product, or merchant ops teams.
+**Analytical Focus:** Business validation, pattern discovery, outlier detection, correlation analysis
 
 ---
 
-## Key Business Findings (Business-oriented framing)
+## 📈 Power BI Dashboard
 
-(Kept concise and business focused — findings map directly to financial and operational impact.)
+**6-Page Interactive Dashboard** providing business intelligence across the entire fintech ecosystem:
 
-### Customer Insights
-- Affluent customers contribute outsized transaction value though they are a smaller population — opportunity for targeted engagement and cross-sell.
-- Mass segment drives volume but lower average ticket size — potential to grow revenue via product nudges and promotions.
-- Acquisition channel quality varies: some channels acquire customers who seldom transact, wasting marketing dollars.
+### **Page 1: Executive Overview** 
+![Overview Dashboard](PowerBi/01_OverView.png)
 
-### Transaction Insights
-- Overall platform is stable but failures concentrate in specific payment-method + channel pathways — targeted fixes expected to yield high ROI.
-- Large-ticket transactions show slightly higher failure propensity, leading to higher per-incident revenue risk.
+*Business Health at a Glance*
+- Total transactions, transaction value, average transaction size
+- Transaction success rate % vs. failure rate %
+- Monthly transaction trends and growth trajectory
+- Key KPIs: Active customers, fraud rate %, chargeback rate %
+- Card: High-value metrics for executive briefing
 
-### Merchant Insights
-- Top merchants drive substantial value concentration, creating a need for merchant-level monitoring and contingency planning.
-- Merchant categories differ in risk and performance; treating them uniformly is inefficient.
-
-### Fraud & Risk Insights
-- Fraud is not evenly distributed; specific methods and merchant categories account for disproportionate dollar exposure.
-- Risk banding for customers and merchants is predictive and should be used to prioritize controls.
-
-### Chargeback Insights
-- Chargeback rate is low in count but high in financial impact; certain reason codes and merchant categories produce more unrecovered losses.
-
-### Support Insights
-- Support load is highly concentrated in transaction-related issues; reducing failures directly reduces support cost and improves customer satisfaction.
+**Enablement:** Quick assessment of overall platform health and month-over-month performance.
 
 ---
 
-## 🚀📌 Strategic Recommendations & व्यवस्थापन (Business Implementation)
+### **Page 2: Customer Analysis**
+![Customer Analysis](PowerBi/02_CustomerAnalysis.png)
 
-(Kept the original recommendations and prioritized them. Added concise business-implementation focus and emphasized the next steps.)
+*Customer Segmentation & Engagement*
+- Customer count and distribution by segment (Mass, Affluent, Premium)
+- Transaction value by customer segment
+- Active customer % (customers with transactions vs. total customers)
+- Customer acquisition channel performance
+- Customer risk band distribution and composition
+- Transaction count and value by risk band
+- Income band segmentation
 
-### 🔴 High Priority — Financial Impact & Risk Mitigation
-- Implement tiered chargeback monitoring and prevention for high-exposure merchants; establish SLA-driven escalation paths and special handling for top-20 merchants.
-- Conduct targeted technical audits of the highest-failure channel+payment-method combinations and allocate engineering sprints to resolve root causes.
-- Create a merchant-education and dispute-prevention program for the reason codes with the worst recovery rates.
-- Reduce failed transaction-driven support tickets by implementing proactive error-handling and clear end-user messaging.
-
-### 🟡 Medium Priority — Growth & Efficiency
-- Reallocate acquisition spend to channels with best cost-per-active-customer and highest LTV; run controlled experiments to validate uplift.
-- Promote low-risk, high-volume payment methods (e.g., UPI-like rails) with incentives to shift mix toward lower fraud exposure.
-- Expand merchant programs in categories demonstrating stable risk and high value; diversify revenue concentration.
-- Launch engagement campaigns for affluent customers to increase transaction frequency.
-
-### 🟢 Low Priority — Incremental Optimization
-- Develop a loyalty and premium offering for low-risk high-engagement customers.
-- Document best-practice resolution workflows and replicate across support teams to compress resolution time.
-
-Business Implementation notes (व्यवस्थापन)
-- Assign an owner for each high-priority recommendation (Product/Engineering, Risk/Payments, Merchant Ops, Support) and define KPIs (failure rate reduction, recovery rate improvement, LTV uplift, support MTTR) and timelines (30/60/90 day milestones).
-- Establish a cross-functional steering committee that reviews the BI outputs weekly and drives implementation tickets to engineering and merchant operations.
+**Enablement:** Identify which customer segments drive value, which acquisition channels are effective, and where risk is concentrated.
 
 ---
 
-## Project Workflow
+### **Page 3: Transactions & Merchant Analysis**
+![Transactions & Merchants](PowerBi/03_Transaction&Merchant.png)
+
+*Payment Performance & Merchant Impact*
+- Channel performance: Volume and value by channel (Web, POS, ATM, Mobile)
+- Payment method success rates and value contribution (UPI, Net Banking, Wallet, Bank Transfer)
+- Channel + payment method combination analysis (identify weak spots)
+- Merchant category performance and failure rates
+- Top merchants by transaction value
+- Merchant tier contributions
+- Transaction type breakdown (Purchase, Transfer, Bill Payment, Withdrawal)
+- Transaction size band analysis (failure rate by transaction size)
+
+**Enablement:** Prioritize channel/payment method improvements, identify merchant opportunities, understand transaction risk by size.
+
+---
+
+### **Page 4: Fraud & Risk Analysis**
+![Fraud Analysis](PowerBi/04_FraudAnalysis.png)
+
+*Financial Risk & Fraud Exposure*
+- Fraud distribution by payment method (which methods are high-risk)
+- Fraud concentration by customer segment and risk band
+- Merchant risk rating impact on fraud transactions
+- Chargeback rate by merchant category
+- Total chargeback value and recovery amount
+- Unrecovered chargeback exposure
+- Chargeback reason breakdown (most costly reasons)
+- Payment method fraud concentration
+- High-risk merchant identification (fraud transactions + chargeback exposure)
+
+**Enablement:** Identify which payment rails require strengthened fraud controls, which merchants need enhanced monitoring, where financial exposure is greatest.
+
+---
+
+### **Page 5: Support Tickets & Customer Experience**
+![Support Tickets](PowerBi/05_SupportTickets.png)
+
+*Operational Workload & Customer Satisfaction*
+- Ticket volume by issue category
+- Average resolution time by issue category
+- Ticket priority distribution (Critical, High, Medium, Low)
+- Ticket status breakdown (Open, In Progress, Resolved, Closed)
+- Customer satisfaction score by issue category
+- Satisfaction correlation with resolution time bands
+- Support channel analysis (Email, Phone, Chat)
+- Agent team workload distribution
+- Failed transaction correlation with support tickets
+
+**Enablement:** Identify issue categories creating most operational pressure, assess resolution efficiency, connect product issues to support load.
+
+---
+
+### **Page 6: Root Cause Analysis**
+![Root Cause Analysis](PowerBi/06_RootCause.png)
+
+*Dimensional Decomposition for Problem-Solving*
+- Failed transaction value decomposition by:
+  - Payment method
+  - Transaction type
+  - Merchant category
+  - Customer segment
+  - Channel
+  - Risk band
+- Chargeback value decomposition by:
+  - Merchant category
+  - Reason code
+  - Customer segment
+- Support ticket decomposition by:
+  - Issue category
+  - Priority
+  - Customer segment
+  - Ticket status
+
+**Enablement:** Drill into any business problem (failed transactions, chargebacks, support load) to identify the specific dimension driving the issue—enables targeted remediation.
+
+---
+
+## 🎯 Key Business Findings
+
+### 👥 **Customer Insights**
+
+**Segment Value Concentration**
+- Affluent customers represent a disproportionate share of transaction value despite smaller customer count
+- Mass segment drives transaction volume but lower average transaction size
+- Customer tenure shows weak correlation with transaction frequency (suggests acquisition quality varies by channel)
+
+**Acquisition Channel Quality**
+- Digital channel demonstrates higher customer engagement and transaction initiation
+- Branch channel shows lower transaction frequency but higher average transaction size
+- Channel effectiveness should be evaluated on customer lifetime value, not acquisition volume alone
+
+**Risk & Value Relationship**
+- High-risk customers do generate transactions, but at lower frequency and slightly lower average value
+- Medium-risk segment represents the largest opportunity (balance of volume and value)
+
+---
+
+### 💳 **Transaction Insights**
+
+**Success Rates & Failure Concentration**
+- Overall transaction success rate suggests reliable platform foundation
+- Transaction failures are not uniformly distributed:
+  - Specific channel + payment method combinations show significantly higher failure rates
+  - Certain transaction types (e.g., transfers, bill payments) show higher failure propensity
+  - Large transactions (>50K) show marginally higher failure rates than micro-transactions
+
+**Payment Method Performance**
+- UPI and wallet methods dominate volume but show mixed reliability profiles
+- Net Banking demonstrates lower failure rates despite smaller volume (suggests different customer base)
+- Bank Transfer shows smallest volume with moderate reliability
+
+**Critical Observation:** Failure concentration suggests operational inefficiency in specific pathways rather than systemic platform issues—remediation can be targeted.
+
+---
+
+### 🏪 **Merchant Insights**
+
+**Strategic Importance Requires Multi-Dimension Evaluation**
+- Largest merchants by transaction count are not always the highest-value merchants
+- Merchant categories show varying performance profiles:
+  - Retail & E-commerce: High volume, moderate failure rate
+  - Financial Services: Lower volume, higher average transaction size
+  - Telecom/Utilities: High volume, low average transaction size
+
+**Top Merchant Exposure**
+- Top 20 merchants represent substantial transaction value concentration
+- This creates operational risk if any single merchant experiences issues
+- Risk should be monitored separately from transaction count
+
+---
+
+### 🛡️ **Fraud & Risk Insights**
+
+**Payment Method Fraud Concentration**
+- Specific payment methods show disproportionately high fraud flags (e.g., Wallet, certain third-party services)
+- Fraud concentration suggests method-specific vulnerabilities or customer behavior patterns
+- UPI (high volume) shows relatively lower fraud rate—scaling this method may improve overall risk profile
+
+**Customer Risk Band Validity**
+- Risk band assessment appears effective: high-risk customers show measurably higher fraud rates
+- Medium-risk band represents substantial fraud exposure due to larger customer population
+- Low-risk customers still show some fraud activity (suggests either false positives or new risks not captured in model)
+
+**Merchant Risk Correlation**
+- High-risk merchants are responsible for disproportionate chargeback exposure
+- Merchant risk rating appears predictive—should be maintained as key control
+
+---
+
+### 💰 **Chargeback Insights**
+
+**Financial Impact Exceeds Transaction Count Impact**
+- Chargeback rate (transaction count basis) is ~0.39%, but financial exposure is concentrated:
+  - Average chargeback amount is higher than average transaction amount
+  - Recovery rate is partial (not 100%), creating net financial losses
+  - Unrecovered value represents direct profit loss
+
+**Chargeback Reason Analysis**
+- Most chargebacks cluster around a few reason codes
+- Specific reason codes create substantially higher losses (lower recovery rates)
+- Merchant education and preventive controls should target high-loss reasons
+
+**Merchant Category Exposure**
+- Certain merchant categories (e.g., high-value retail) carry higher chargeback exposure
+- This may reflect transaction size + customer base rather than merchant malice
+- Risk management should differentiate between high-volume and high-value chargeback exposure
+
+---
+
+### 🎧 **Customer Support Insights**
+
+**Issue Category Workload Distribution**
+- Support load is not uniformly distributed: specific issue categories consume disproportionate resources
+- High-volume categories (e.g., transaction inquiries, payment issues) require automation or self-service opportunities
+- Critical categories require immediate resolution but may be lower volume (prioritize effectively)
+
+**Resolution Time & Customer Satisfaction**
+- Clear correlation: faster resolution → higher satisfaction
+- Certain issue categories consistently take longer to resolve (process/system constraints?)
+- Satisfaction dips significantly after 24-hour resolution window
+
+**Support as Operational Indicator**
+- Support ticket volume is correlated with transaction failures
+- This creates a feedback loop: transaction failures → support load → customer experience degradation
+- Improving transaction reliability directly reduces support burden
+
+---
+
+## 📌 Strategic Recommendations
+
+### **🔴 High Priority** — Financial Impact & Risk Mitigation
+
+| Finding | Business Implication | Recommended Action |
+|---------|----------------------|-------------------|
+| High-risk merchants generate disproportionate chargeback exposure | Significant unrecovered losses concentrated in small merchant population | Implement tiered chargeback monitoring and prevention programs; prioritize high-loss merchants for enhanced controls |
+| Specific channel + payment method combinations show 2-3x higher failure rates | Operational inefficiency in critical payment pathways reducing revenue | Conduct technical audit of failing combinations; prioritize engineering resources to improve reliability in top-value pathways |
+| Chargeback recovery rate is <60% for specific reason codes | Preventable financial losses on certain dispute types | Launch merchant education program on specific reason codes; implement pre-emptive refund policy for high-recovery-risk scenarios |
+| Failed transactions correlate with support ticket volume | Operational efficiency and customer experience problem compounded | Reduce failed transaction rate from primary pathways; invest in self-service support tools for transaction failure scenarios |
+
+### **🟡 Medium Priority** — Growth & Efficiency
+
+| Finding | Business Implication | Recommended Action |
+|---------|----------------------|-------------------|
+| Digital acquisition channel shows higher engagement than Branch | Opportunity to optimize marketing spend and channel mix | Evaluate cost-per-active-customer by channel; shift marketing budget toward higher-engagement channels; develop digital-first customer onboarding |
+| Specific payment methods (e.g., UPI) combine high volume + low fraud rate | Scalable, lower-risk growth opportunity | Create incentive programs for UPI adoption; promote as preferred method in customer communication |
+| High-value merchants concentrated in specific categories | Revenue concentration risk; opportunity for category expansion | Identify merchant categories with lower penetration; develop targeted merchant acquisition strategy for high-margin categories |
+| Affluent customer segment shows high transaction value but lower frequency | Untapped engagement opportunity in high-value segment | Analyze affluent customer behavior; develop segment-specific engagement programs to increase transaction frequency |
+
+### **🟢 Low Priority** — Incremental Optimization
+
+| Finding | Business Implication | Recommended Action |
+|---------|----------------------|-------------------|
+| Low-risk customer segment is smaller but highly engaged | Quality customer base that may warrant differentiated service | Develop loyalty program for low-risk customers; offer premium features to encourage higher engagement |
+| Certain support issue categories have faster resolution | Best practice available for other categories | Document resolution workflows for high-performing categories; replicate patterns in slower categories |
+
+---
+
+## 📊 Project Workflow
 
 ```
 Raw CSV Data
@@ -346,12 +557,46 @@ NexaPay-Digital-Payments-Analytics/
 
 ## 🎓 Key Analytical Techniques Demonstrated
 
-- SQL Mastery: complex JOINs, CTE pipelines, window functions, cohort analysis, conditional business logic, and performance-aware aggregation.
-- Data Quality Rigor: deterministic SQL checks and reproducible Python validation producing audit-ready artifacts.
-- Business Intelligence: multi-dimensional analysis, drill-to-root-cause, and financial impact modeling.
-- Python Data Analysis: scalable extraction, reproducible notebooks, and visualization-ready outputs for BI consumption.
-- Executive Communication: concise dashboards and prioritized recommendations tied to business KPIs.
+✅ **SQL Mastery**
+- Complex JOINs across 6 tables maintaining referential integrity
+- CTEs for hierarchical data analysis
+- Window functions for ranking and trend analysis
+- CASE statements for conditional business logic
+- Aggregate functions with GROUP BY and HAVING
+- Date/time analysis with date_trunc() and interval calculations
+- Fraud rate calculations and concentration analysis
+
+✅ **Data Quality Rigor**
+- Comprehensive validation framework (completeness, consistency, validity)
+- Referential integrity verification across all relationships
+- Categorical value standardization and validation
+- Duplicate detection and reconciliation
+- Null value handling and impact assessment
+
+✅ **Business Intelligence**
+- Multi-dimensional business analysis (customer, transaction, merchant, risk, support)
+- Cross-domain correlation analysis (failed transactions ↔ support load)
+- Financial impact quantification (chargeback recovery rates, unrecovered losses)
+- Root cause decomposition enabling targeted problem-solving
+- Actionable insights with clear business implications
+
+✅ **Python Data Analysis**
+- Database connectivity and data extraction at scale (1.5M+ records)
+- Data integrity validation in Python
+- Exploratory analysis and pattern discovery
+- Business logic validation through multiple analytical lenses
+
+✅ **Executive Communication**
+- Dashboard design focused on decision-maker needs
+- Clear visualization hierarchy (executives → detail)
+- Findings connected to business impact, not just metrics
+- Recommendations prioritized by financial and operational significance
 
 ---
 
-(Removed License & Use and Project Completed lines as requested.)
+
+
+---
+
+**Project Completed:** September 2026  
+**Repository:** [NexaPay-Digital-Payments-Analytics](https://github.com/sahilrege9673/NexaPay-Digital-Payments-Analytics)
