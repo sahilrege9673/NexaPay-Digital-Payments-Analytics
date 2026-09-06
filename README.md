@@ -151,7 +151,7 @@ Comprehensive SQL analysis organized across four layers of business inquiry:
 ### 1. **Data Loading** (`01_Data_Loading.sql`)
 - Created normalized schema with 6 core tables
 - Established primary/foreign key constraints
-- Loaded 1.5M+ transaction records and supporting dimensions
+- Loaded 2.0M transaction records and supporting dimensions
 - Validated successful data ingestion via row counts
 
 ### 2. **Data Cleaning & Validation** (`02_Data_Cleaning_Validation.sql`)
